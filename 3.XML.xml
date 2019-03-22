@@ -1,0 +1,330 @@
+eXtensible Markup Language
+SGML- Standard Generalized Markup Language
+
+XML -
+
+Tinh danh dau
+Luu tru va truyen tai du lieu
+
+
+Markup Language - 
+Markup la thong tin bo sung vao mot tai lieu nham nang cao y nghia cua no theo cac cach cu the
+trong do nhan dien cac thanh phan va cach chung lien quan voi nhau 
+Markup Language la mot tap hop cac bieu tuong co the duoc dat trong text cua mot tai lieu de phan ranh gioi va gan nhan cac phan tu cua tai lieu do
+
+example:
+
+<message>
+    <text>Hello, World!</text>
+</message>
+
+Cu phap cua XML
+
+<?XML version="1.0"?>
+<contact-info>
+<name>Tanmay Patil</name>
+<company>TutorialPoint</company>
+<phone>(011) 123-4567</phone>
+</contact-info>
+
+Khai bao XML - XML Declaration
+
+<?xml version="1.0" encoding="UTF-8">
+
+Quy tac cu phap
+
+Tags and elements
+
+
+Attributes
+
+
+
+Tham chieu trong XML
+
+Tham chieu  -References
+
+Tham chieu thuc the - Entity References
+
+Tham chieu ky tu - Character References
+
+
+
+Text trong XML
+
+<  - &lt; Nho hon
+>  - &gt; Lon hon
+&  - &amp; Va
+''  - &apos; Dau nhay don
+" " - &quot; Trich dan kep
+
+Document trong xml - la mot don vi thong tin XML duoc cau thanh boi cac phan tu va danh dau khac
+
+Document gom
+
+Documet Prolog
+- XML declaration
+- Document type declaration
+
+Document element 
+
+
+XML Declaration
+
+<?xml
+    version="version_number"
+    encoding="encoding_declaration"
+    Standalone="standalone_status"
+?>
+
+
+<?xml version='1.0' encoding='iso-8859-1' standalone='no' ?>
+
+* The trong XML
+
+The mo trong XML - bat dau element
+<address>
+
+The dong trong XML - ket thuc element
+
+</address>
+
+The trong - the khong co noi dung
+
+<hr></hr>
+
+<hr />
+
+Quy tac the - 
+ 1/ phan biet kieu chu - the mo va dong phai cung kieu chu
+ 2/ The trong XML duoc dat trong mot thu tu chinh xac
+
+ Cu phap
+<element-name attributes1 attributes2>
+    content
+</element-name>
+
+
+element-name ten phan tu - phai nhu nhau o the mo va dong
+attributes1 - attributes2 la thuoc tinh cua phan tu duoc phan biet boi cac khoang trong
+
+Phan tu trong:
+<name attributes1 attributes2 .../>
+
+* Thuoc tinh trong XML
+
+Cu phap
+
+* Comment
+
+<!--   Your Comment   -->
+
+bat dau <!--   ke thuc    -->
+Comment khong duoc xuat hien truoc phan khai bao
+
+Comment co the xuat hien o bat ky dau trong mot tai lieu
+
+Cac comment khong duoc xuat hien ben trong cac gia tri thuoc tinh
+
+Comment khong duoc long comment
+
+
+* Character Entity
+
+Thuc the ky tu 
+Thuc the - Entity cua tai lieu dong vai tro nhu la phan goc cua cay thuc the (Entity Tree) va la diem bat dau cho mot XML Processor
+
+Phan loai:
+
+Thuc the ky tu duoc dinh truoc
+- Duoc gioi thieu de tranh tinh luong nghia trong khi su dung cac bieu tuong
+
+Thuc the ky tu dang so
+
+Thuc the ky tu duoc dat ten
+
+
+* Khu vuc CDATA - Character Data - du lieu ky tu
+
+CDATA dioc dinh nghia nhu khoi text maf khong duoc phan tich boi Parser
+ Cu phap
+
+ <![CDATA[
+    Characters with Markup
+ ]]>
+
+Bat dau voi delimiter :  <![CDATA[
+Ket thuc voi: delimiter ]]>
+
+Vi du:
+<script>
+<![CDATA[
+    <message> Welcome to Page </message>
+]]>
+
+Quy tac cho CDATA
+CDATA khong the chua chuoi "]]>" o bat ky dau trong tai lieu XML
+Viec long la khong duoc phep trong khu vuc CDATA
+
+* Whitespace
+
+Khoang trang quan trong  - Xuat hien ben trong phan tu chua text cung voi phan bi danh dau
+
+Khoang trang khong quan trong - la cac khoang trang o do chi co noi dung phan tu duoc cho phep
+<address.category="residence">
+hoac
+<address....category="...residence">
+
+thuoc tinh dac biet xml:space
+
+<!ATTLIST address xml:space (default|preseve)'preseve'>
+
+* Chi thi xu ly - Processing Instructions - PIs
+CHi thi xu lys cho phep tai lieu chua cac chi thi cho cac ung dung PIs khong la mot phan cua du lieu ky tu CDATA cua tai lieu nhung PHAI duoc truyen thong qua ung dung
+
+Cu phap
+<?target instructions?>
+
+target - nhan dien ung dung ma chi thi huong toi
+instuction - no la chi thi ma mieu ta thong tin cho ung dung de xu ly
+
+<?xml-stylesheet href="tutorialspointstyle.css" type="text/css"?>
+
+Quy tax cho chi thi xu ly trong XML
+Mot chi thi xu ly co the chua bat ky du lieu nao ngoai tru to hop ?> ma duoc thong dich nhu la delimiter dong.
+
+
+* Ma hoa ky tu
+
+encoding - Ma hoa ky tu la tien trinh chuyen doi cac ky tu Unicode thanh bieu dien nhi phan tuong duong cua chung
+ Khi XML processor doc mot tai lieu XML no ma hoa tai lieu phu thuco va kieu ma hoa 
+
+ Kieu Ma hoa ky tu trong XML
+
+ <UTF-8> - Mac dinh
+ <UTF-16>
+
+ UTF - UCS Tranformation Format
+ UCS - Universal Character Set
+
+ Cu phap - duoc khai bao trong XML Prolog
+
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+* Validation
+Validation la mot tien trinh ma tai lieu duoc xac nhan. 
+Tai lieu XML la <Well-formed>
+Tai lieu la hop le
+
+Tai lieu XML la Well-formed neu tuan theo quy tac
+
+Khong DTD - XML phai du dung cac thuc the ky tu duoc dinh nghia truoc chuoi
+amp  apos  gt lt quot
+
+Di theo thu tu cac the 
+Moi the mo phai co mot the dong hoac tu dong-
+
+Cac thuc the khac cac thuc the amp apos gt lt quot phai duoc khai bao
+
+Exmaple:
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE address
+[
+   <!ELEMENT address (name,company,phone)>
+   <!ELEMENT name (#PCDATA)>
+   <!ELEMENT company (#PCDATA)>
+   <!ELEMENT phone (#PCDATA)>
+]>
+<address>
+   <name>Tanmay Patil</name>
+   <company>TutorialsPoint</company>
+   <phone>(011) 123-4567</phone>
+</address>
+
+Tai lieu XML hop le - la mot tai lieu XML Well-formed va co mot DTD lien ket voi 
+
+*DTDs- Document Type Declatation trong XML.
+
+la mot cach de mieu ta ngon ngu XML 
+DTD kiem tra tu vung va tinh hop le cua cau truc tai lieu XML theo cac quy tac ngu phap cua ngon ngu XML thich hop
+
+Cu phap
+
+<!DOCTYPE element DTD identifier
+[
+    declaration1
+    declaration2
+    ........
+]>
+
+Internal DTD trong XML - 
+Mot DTD duoc xem nhu la mot DTD noi toi neu cac phan tu duoc khai bao ben trong XML file. De xem no nhu la DTD noi toi thuoc tinh standalone trong khai bao XML phai duocj thiet lap la yes. Nghia la khai bao lam viec doc lap voi nguon ngoai vi-
+
+Cu phap
+
+<!DOCTYPE root-element [element-declarations]>
+
+Example:
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!-- DTD ngay sau phan dau khai bao la phan khai bao kieu tai lieu thuong la doctype-->
+<!DOCTYPE address [
+   <!ELEMENT address (name,company,phone)>
+   <!ELEMENT name (#PCDATA)>
+   <!ELEMENT company (#PCDATA)>
+   <!ELEMENT phone (#PCDATA)>
+]>
+<address>
+   <name>Tanmay Patil</name>
+   <company>TutorialsPoint</company>
+   <phone>(011) 123-4567</phone>
+</address>
+
+External DTD
+<!DOCTYPE root-element SYSTEM "file-name">
+
+
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE address SYSTEM "address.dtd">
+<address>
+  <name>Tanmay Patil</name>
+  <company>TutorialsPoint</company>
+  <phone>(011) 123-4567</phone>
+</address>
+
+
+* Schema
+
+* Tree Structure
+
+* DOM
+
+* Namespace
+
+* Database
+
+*Viewer
+
+* Editor
+
+* Parser
+
+* Processor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

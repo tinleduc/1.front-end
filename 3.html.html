@@ -1,0 +1,316 @@
+* Gioi thieu Html 
+
+Hypertext Markup Language
+
+Example: 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day la tieu de</title>
+</head>
+<body>
+    <h1>Day la dau de</h1>
+    <p>Pha noi dung cua tai lieu</p>
+</body>
+</html>
+
+Cau truc tai lieu 
+
+The khai bao <!DOCTYPE>
+<html>
+    <head>
+        Cac the lien quan den dau de tai lieu
+    </head>
+    <body>
+        Cac the lien quan den noi dung tai lieu
+    </body>
+</html>
+
+
+* HTML co ban
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>Day la tieu de - Vi du dau de</title>
+    </head>
+    <body>
+    <h1>Day la dau de 1</h1>
+    <h2>Day la dau de 2</h2>
+    <h3>Day la dau de 3</h3>
+    <h4>Day la dau de 4</h4>
+    <hr /> 
+    <!-- Tao dong ngang ngan cach 2 paragraph -->
+
+    <h5>Day la dau de 5</h5>
+    <pre>
+            function testFunction( strText ){
+               alert (strText)
+            }
+            </pre>
+    <!-- <pre> giu nguyen dinh dang html -->
+
+    <h6>Day la dau de 6</h6>
+    <center>
+    <p>Doan van nay duoc can chinh vao giua.</p>
+    </center>
+    <p>Day la doan van.<br />
+    Cam on ban da hoc HTML tai VietJack.<br />
+    Chuc cac ban hoc tot!<br />
+    VietJack Team</p>
+    </body>
+    </html>
+
+* Phan tu trong <HTML>
+
+    The mo + Noi dung + The dong
+
+    phan tu khong can dong
+
+    <img/...>
+    <hr />
+    <br />
+    
+
+* Thuoc tinh trong <HTML>
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>Vi du thuoc tinh align trong HTML</title>
+    </head>
+    <body>
+    <p align="left">Doan van nay duoc can chinh trai</p>
+    <p align="center">Doan van nay duoc can chinh giua</p>
+    <p align="right">Doan van nay duoc can chinh phai</p>
+    </body>
+    </html>
+
+    Thuoc tinh cot loi:
+    id - nhan dien duy nhat bat ky phan tu nao trong mot trang HTML.
+    Neu mot phan tu mang thuoc tinh id nhuw la mot dinh danh duy nhat no co sthe xac dinh dich danh phan tu do va noi dung cua no.
+    Neu ban co 2 phan tu cung ten trong mot trang web ban co the su dung thuoc tinh id de phan biet giua hai phan tu.
+
+Example:
+<p id="html">Vi du 1 ve thuoc tinh id trong HTML</p>
+<p id="css">Vi du 2 ve thuoc tinh id trong HTML</p>
+
+* title - cung cap mot tieu de cho mot phan tu 
+Example:
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vi du thuoc tinh title trong HTML</title>
+</head>
+<body>
+<h3 title="Vi du thuoc tinh title!">Ban re chuot qua day</h3>
+</body>
+</html>
+
+* class
+Duoc su dung de lien ket mot phan tu voi mot style Sheet va xac dinh kieu cua phan tu.
+
+Class = "tenClass1 tenClass2 tenClass3"
+
+* style - xac dinh ro cac quy tac Cascading Style Sheet trong phan tu:
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vi du thuoc tinh style trong HTML</title>
+</head>
+<body>
+<p style="font-family:arial; color:#FF0000;">Hoc HTML tai VietJack...</p>
+</body>
+</html>
+
+* Thuoc tinh global
+
+Thuộc tính dir
+    Chi dao trinh duyet phuong huong ma van ban hien thi
+    gia tri:
+        ltr: tu trai qua phai
+        rtl: Phai qua trai cho ngon ngu Hebrew, Arabic ..duoc doc tu phai qua trai
+    
+
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+<title>Vi du thuoc tinh dir trong HTML</title>
+</head>
+<body>
+Phan van ban nay duoc hien thi tu phai sang trai.
+</body>
+</html>
+
+
+Thuộc tính lang
+
+Cho phep ban chi ro ngon ngu chinh su dung trong mot tai lieu
+Nhung thuoc tinh nay duoc giu trong HTML chi cho kha nang tuong thich nguoc voi cac phien ban truoc cua <HTML>
+Thuoc tinh nay duoc thay the bang thuoc tinh xml:lang trong tai lieu XHTML moi
+
+VIDU:
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<title>Vi du thuoc tinh lang trong HTML</title>
+</head>
+<body>
+Trang VietJack duoc viet bang tieng Viet.
+</body>
+</html>
+
+<!--
+Thuộc tính	Giá trị	Chức năng
+align	right, left, center	Các thẻ căn chỉnh theo chiều ngang
+valign	top, middle, bottom	Các thẻ căn chỉnh theo chiều dọc trong một phần tử HTML
+bgcolor	Giá trị số, thập lục phân, RGB	Đặt màu nền phía sau một phần tử
+background	URL	Đặt ảnh nền phía sau một phần tử
+id	Người dùng tự định nghĩa	Đặt tên một phần tử để sử dụng với Cascading Style Sheets
+class	Người dùng tự định nghĩa	Phân loại một phần tử để sử dụng với Cascading Style Sheets
+width	Giá trị số	Xác định độ rộng của bảng, hình ảnh hoặc ô trong bảng
+height	Giá trị số	Xác định chiều cao của bảng, hình ảnh hoặc ô trong bảng
+title	Người dùng tự định nghĩa	"Pop-up" tiêu đề của phần tử
+
+-->
+
+Thuộc tính xml:lang
+
+
+* Dinh dang
+
+in dam, in nghieng, gach chan, chi so tren chi so duoi trong <HTML>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cac the dinh dang van ban trong HTML</title>
+</head>
+<body>
+<p>Vi du <b>the b in dam trong HTML</b>.</p>
+<p>Vi du <i>the i in nghieng trong HTML</i>.</p>
+<p>Vi du <u>the u gach chan trong HTML</u>.</p>
+<p>Vi du <strike>the strike gach ngang chu trong HTML</strike>.</p>
+<p>Vi du <tt>the tt font don cach trong HTML</tt>.</p>
+<p>Vi du <sup>the sup - do cao mot nua hien tren trong HTML</sup>.</p>
+p>Vi du <sub>the sub  - do cao mot nua hien duoi trong HTML</sub>.</p>
+<p>Toi thich hoc <del>HTML</del> <ins>CSS</ins></p>
+<p>Tu sau day su dung the <big>big </big> trong HTML.</p>
+
+</body>
+</html>
+
+* Cac phan tu ve cum tu
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nhan manh van ban trong HTML</title>
+</head>
+<body>
+<p>Vi dụ sau su dung the <em>em trong HTML</em>.</p>
+<p>Cum tu sau duoc danh dau bang <mark>the mark trong HTML</mark> voi mau vang</p>
+<p>Day la <strong>the strong </strong> trong HTML.</p>
+<p>Toi thich hoc <abbr title="Ngon ngu lap trinh Java">Java</abbr>.</p>
+<p><bdo dir="rtl">Phan van ban se hien thi tu phai qua trai.</bdo></p>
+<p>HTML la mot khai niem <dfn>dac biet</dfn> trong tam tri toi.</p>
+<blockquote>HTML là chữ viết tắt của <b>H</b>yper<b>t</b>ext <b>M</b>arkup <b>L</b>anguage, là ngôn ngữ được sử dụng rộng rãi nhất để viết các trang Web.</blockquote>
+
+</body>
+</html>
+
+
+<!-- * The meta -->
+
+The <meta> duoc su dung de cung cap cac thong tin them nhu vay
+
+
+* Comment
+
+* Hinh anh
+
+* Tao bang
+
+* Tao dang sach
+
+* Text link
+
+* Image link
+
+* Email link,
+
+* Tao frame
+ Duoc su dung de phan chia cua so trinh duyet cua ban thanh cac khu vuc khac nhau ma moi khu vuj tai mot tai lieu HTML rieng
+
+Han che cua frame trong HTML,
+- Mot vai thiet bi nho khong giai quyet duoc cac frame vi man hinh cua no khong du lon de chia thanh cac <Frame>
+- Cac trang hien thi khac nhau tren cac may tinh khac nhau do do phan giai cua man hinh
+- Nut quay lai trang truoc cos the khong lam viec nhu nguoi dung mong muon
+- Van con mot vai trinh duyet khong ho tro cong nghe <frame>
+
+Tao Frame trong <HTML>
+    chung ta su dung the <frameset> thay cho the <body>
+
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <title>Ví dụ tao Frame trong HTML</title>
+            </head>
+            <frameset rows="10%,80%,10%">
+               <frame name="top" src="../html/top_frame.htm" />
+               <frame name="main" src="../html/main_frame.htm" />
+               <frame name="bottom" src="../html/bottom_frame.htm" />
+               <noframes>
+               <body>
+                  Trình duyet cua ban khong ho tro Frame.
+               </body>
+               </noframes>
+            </frameset>
+            </html>
+
+* Tao Iframe
+Xac dinh mot khu vuc trong trang ma tai do trinh duyet co the hien thi mot trang rieng biet.
+Nhung mot trang khac vao trang hien tai.
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vi du the Iframe trong HTML</title>
+</head>
+<body>
+<p>Phan noi dung tai lieu...</p>
+<iframe src="../html/menu.htm" width="555" height="200">
+   Rat tiec vi trinh duyet cua ban khong ho tro Iframe.
+</iframe>
+<p>Phan noi dung tai lieu...</p>
+</body>
+</html>
+
+
+* Tao khoi (Block)
+
+* Thiet lap background
+
+* Thiet lap mau
+
+* Thiet lap font,
+
+* Form
+
+* Nhung da phuong tien
+
+* Tao dong chu chay
+
+* Header
+
+* Style Sheet
+
+* Su dung javascript
+
+* su dung layout
+
+

@@ -1,0 +1,494 @@
+CSS - Cascading style Sheet
+
+Dung de - Bo cuc mot website dua vao cac the HTML
+
+* Cau truc cua CSS
+
+Selector{
+    properties: value;
+}
+
+Chu thich: 
+Selector: la cac doi tuong ma chung ta muon tac dong vao 
+properties: La cac thuoc tinh trong css nhuw: Background, color-
+Value: la cac gia tri cua thuoc tinh
+
+* Cac viet CSS
+* Vi tri dat CSS
+Co the dat CSS o bat cu dau trong 1 file HTML nhung moi nguoi nen dat o giua 2 cap the <head></head>
+
+* Khai bao CSS
+
+Khai bao truc  trong file html
+
+<style type="text/css" media="screen">
+    /*code css*/
+</style>
+
+Khai bao ngay tren cac element cua html
+
+<div style="background:red">hello</div>
+
+Khai bao nhung file CSS vao 
+
+<link rel="stylesheet" href="dia chi duong dan cua file css">
+
+file css co duoi .css
+
+* Selector trong CSS
+
+- Khai niem - la cac lua chon dung de truyvan den cac the HTML nham tac dong vao chung
+
+- Dang Selector
+
+* Selector all
+    Tac dong den tat cac cac the HTML tren trang
+    Cu Phap
+    *{
+        property: value;
+    }
+    Example:
+    /* CSS tat ca cac the HTML deu co chu mau do*/
+    *{
+        color: red;
+    }
+
+* Selector TagName
+    Chi tac dong den cac the HTML co tagname ma no quy
+
+    Cu Phap
+    tagName{
+        property: value;
+    }
+
+    Example:
+    /* CSS the p deu co chu mau do*/
+    p{
+        color: red;
+    }
+
+* Selector Class
+    Tac dong den tat ca cac the HTML co class ma no quy dinh.
+
+    Cu Phap
+    .className{
+        property: value;
+    }
+
+    Example:
+    /* CSS the co class la banner deu co chu mau do*/
+    .banner{
+        color: red;
+    }
+
+* Select ID :
+    Cu Phap
+    #id{
+        property: value;
+    }
+
+    Example:
+    /* CSS the co id la banner deu co chu mau do*/
+    #banner{
+        color: red;
+    }
+
+
+* Select phan cap
+
+    Cu Phap
+    cha con chau ..n{
+        property: value;
+    }
+
+    Example:
+    /* CSS tat ca cac the p trong the div deu co chu mau do*/
+    div p{
+        color: red;
+    }
+
+* Selector nhieu the
+
+
+* Thuoc tinh background trong CSS.
+
+Cho phep chung ta thiet lap mau sac hay la anh cho nen cua mot hoac nhieu the html
+
+Thuoc tinh nay co phan mo rong gom cac thuoc tinh:
+Thuoc tinh background-color
+    Xac dinh mau nen cho cac the html
+    selectors{
+        background-color: value;
+    }
+
+Value: Mau ten tieng anh - may ma hex - mau RGB - may RGBA ( RGB + opacity 0 -1)
+
+Thuoc tinh background-image
+Xac dinh hinh nen:
+
+    selector{
+        background-image: url(path);
+    }
+Example:
+
+    body{
+        background-image: url(https://toidicode.com/upload/images/logo-toidicode.png);
+    }
+
+Thuoc tinh background-repeat
+
+    selector{
+        background-repeat: value;
+    }
+
+    body{
+        background-image: url(https://toidicode.com/upload/images/logo-toidicode.png);
+        background-repeat: repeat-x;
+    }
+    /* repeat-y repeat*/
+
+    body{
+        background-image: url(https://toidicode.com/upload/images/logo-toidicode.png);
+        background-repeat: no-repeat;
+    }
+    
+
+Thuoc tinh background-position
+
+    seletor{
+        background-position: value;
+    }
+/*
+value là một trong các giá trị sau:
+left, right, top, bottom.
+px. giá trị này có tham số cách trái phải (vd: 50px 70px - là các trái 50px, cách trên 70px).
+%. tương tự như px nhưng đơn vị là %.
+*/
+
+Thuoc tinh background-attachment
+    seletor{
+        background-attachment: value;
+    }
+/*
+value là một trong hai giá trị sau:
+fixed: Cố định khi scroll trang web.
+scroll: Di chuyển theo khi scroll (đây là thuộc tính mặc định).
+*/
+
+Thuoc tinh background
+
+
+background: background-color background-image background-repeat background-position background-attachment;
+
+body{
+    background: green url(https://toidicode.com/upload/images/logo-toidicode.png) no-repeat top left fixed;
+}
+
+
+* Dinh dang text trong CSS.
+
+Thuoc tinh color.
+
+    selector{
+        color: value;
+    }
+
+text-align
+
+    selector{
+        text-algin: value;
+    }
+/*
+Trong đó: value là một trong các giá trị sau:
+
+left: căn lề trái (mặc định).
+right: căn lề phải.
+center: căn giữa.
+justify: căn đều 2 bên.
+inherit: thừa hưởng thuộc tính từ thành phần cha.
+*/
+
+Example:
+
+    .box1{
+        text-align: left
+    }
+    .box2{
+        text-align: center;
+    }
+    .box3{
+        text-align: right;
+    }
+    .box4{
+        text-align: justify;
+    }
+
+text-decoration.
+    selector{
+        text-decoration: value;
+    }
+/* Value co the mot trong nhung gia tri sau
+    none: binh thuong
+    underline: gach chan
+    overline: Gach dau
+    line-though: Chu gach ngang
+    blink: Chu nhap nhay
+    inderit: Ke thua tu thanh phan cha
+*/
+
+.box1{
+    text-decoration: underline;
+}
+.box2{
+    text-decoration: overline;
+}
+.box3{
+    text-decoration: line-through;
+}
+.box4{
+    text-decoration: blink;
+}
+text-indent.
+Xac dinh do thut dau dong cua dong dau tien van ban.
+
+selector{
+    text-indent: value;
+}
+
+
+text-transform.
+
+Xac dinh  kieu dinh dang viet hoa thuong cho van :blank
+
+selector{
+    text-indent: value;
+}
+
+/*
+none: dạng mặc định.
+capitalize: Chữ cái đầu tiên của thành phần là chữ in hoa.
+uppercase: Tất cả chữ trong văn bản đều in hoa.
+lowercase: Tất cả chữ cái đều viết thường.
+inherit: kế thừa thuộc tính từ lớp cha.
+*/
+
+.box1{
+    text-transform:  capitalize;
+}
+.box2{
+    text-transform: uppercase;
+}
+.box3{
+    text-transform: lowercase;
+}
+
+* Cac thuoc tinh tac dong vao font chu trong CSS.
+
+font-family
+
+Thay doi font chu cua cac thanh phan duoc chon
+
+Selector{
+    font-family: value;
+}
+
+Example
+
+p{
+    font-family: Arial;
+}
+
+
+font-size
+
+Xac dinh kick co cua thanh phan duoc chon
+
+
+Selector{
+    font-size: value;
+}
+
+Example
+
+p{
+    font-size: 22px;
+}
+
+
+font-style
+Xac dinh kieu chu cho thanh phan duoc chon
+
+Selector{
+    font-style: value;
+}
+/*
+Trong đó, value là một trong các giá trị sau:
+
+normal: bình thường.
+italic: chữ in nghiêng.
+oblique: in nghiêng nhưng chữ không bị nhạt.
+*/
+Example
+
+p.normal{
+    font-style: normal;
+}
+p.italic{
+    font-style: italic;
+}
+p.oblique{
+    font-style: oblique;
+}
+
+font-variant
+
+Kieu chu
+
+selector{
+    font-variant: value;
+}
+/*
+Trong đó value là một trong các giá trị sau:
+
+normal: Bình thường.
+small-caps: Chuyển đổi sang chữ in hoa.
+inherit: Kế thừa từ thành phần cha.
+*/
+p.normal{
+    font-variant: normal;
+}
+p.small-caps{
+    font-variant: small-caps;
+}
+p.inherit{
+    font-variant: inherit;
+}
+
+font-weight
+Xac dinh chu dam hay chu thuong
+
+selector{
+    font-weight: value;
+}
+
+/*
+Trong đó value là một trong các giá trị sau:
+
+normal: Bình thường.
+bold: Chữ đậm.
+Hoặc có thể là một giá trị số cụ thể.
+*/
+
+p.normal{
+    font-weight: normal;
+}
+p.bold{
+    font-weight: bold;
+}
+p.number{
+    font-weight: 700;
+
+
+* Thuoc tinh display: trong CSS.
+
+display: block - hien thi theo cac hang doc lap.
+
+selector{
+    display: block;
+}
+
+display: inline - ó tác dụng xác định thành phần được hiển thị theo chiều ngang
+ (không ngắt dòng khi chiều rộng vẫn nhỏ hơn chiều rộng của màn hình). 
+ Đây là dạng mặc định của các thẻ a,span,...
+
+selector{
+    display: inline;
+}
+
+
+
+display: inline-block
+-có tác dụng xác định các thành phần sẽ được hiển thị theo khối 
+nhưng là các khối inline.
+
+display: inline-table
+tác dụng xác định thành phần được hiển thị theo dạng khối nột tuyến. 
+Không xuống dòng trước và sau các thành phần cạnh nó.
+
+
+display: list-item
+xác định thành phần sẽ được hiển thị như một thẻ li.
+
+display: none;
+ẩn thành phần được chọn.
+
+display: table
+xác định thành phần được chọn như một thẻ <table>.
+
+
+display: inherit
+-xác định thành phần được chọn kế thừa từ thuộc tính của thành phần cha.
+
+* Thuoc tinh margin: va padding: 
+
+- Margin: cho phép chúng ta tạo ra các khoảng cách
+ từ thành phần được chọn ra phía bên ngoài của thành phần đó.
+margin top-right-bottom-left
+
+Margin 1 gia tri.
+
+div{
+    /* cach deu 4 phia 20px*/
+    margin: 20px;
+    /*Tạo viền cho dễ nhận biết*/
+    border: 1px solid orange;
+}
+
+Margin 2 gia tri.
+
+div{
+    /* cach tren duoi 20px trai phai 30px*/
+    margin: 20px 30px;
+    /*Tạo viền cho dễ nhận biết*/
+    border: 1px solid orange;
+}
+
+Margin 3 gia tri.
+
+
+div{
+    /* cach tren 20px trai-phai 30px duoi 40px*/
+    margin: 20px 30px 40px;
+    /*Tạo viền cho dễ nhận biết*/
+    border: 1px solid orange;
+}
+
+Margin 4 gia tri
+
+
+div{
+    /* cach tren 20px phai 30px duoi 40px trai 50px*/
+    margin: 20px 30px 40px 50px;
+    /*Tạo viền cho dễ nhận biết*/
+    border: 1px solid orange;
+}
+
+Padding:
+có tác dụng căn chỉnh nội dung hiển thị trong một thành phần 
+so với viền của thành phần đó.
+
+
+padding-top: value	-Cách trên.
+padding-bottom: value	-Cách dưới.
+padding-left: value	-Cách trái.
+padding-right:value
+
+
+* Thuoc tinh fload va clear trong CSS.
+
+
+
+* Thuoc tinh position:
+
+
+* Thuoc tinh vertical-align:
